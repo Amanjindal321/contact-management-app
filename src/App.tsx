@@ -7,6 +7,8 @@ import ChartsMapsPage from './pages/ChartsMapsPage';
 const App: React.FC = () => {
   return (
     <div className="flex h-screen">
+     console.log("Hello World");
+      
       <nav className="w-64 bg-gray-800 text-white ">
         <div className="p-4 text-xl font-bold">Contact Management App</div>
         <ul>
