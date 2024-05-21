@@ -40,7 +40,7 @@ The following technologies were used to build this app:
 # Installation and Setup
 To run this app, follow these steps:
 
-- Clone this repository:
+- Clone this repository: https://github.com/Amanjindal321/contact-management-app.git
 - Install the dependencies: npm install
 - Start the app: npm start
 - The app should open in your default browser at http://localhost:3000/.
