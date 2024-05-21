@@ -1,18 +1,22 @@
 // src/pages/ContactsPage.tsx
+// Import necessary modules from React and Redux
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../store/store';
 import { addContact, updateContact, deleteContact } from '../store/contactsSlice';
 
+// Define the ContactsPage component
 const ContactsPage: React.FC = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [editId, setEditId] = useState<string | null>(null);
 
+  // Get the contacts from the Redux store
   const dispatch = useDispatch();
   const contacts = useSelector((state: RootState) => state.contacts.contacts);
 
+  // Define the handleSubmit functions
   const handleSubmit = () => {
     if (editId) {
       dispatch(updateContact({ id: editId, name, email, phone }));
@@ -25,6 +29,7 @@ const ContactsPage: React.FC = () => {
     setPhone('');
   };
 
+  // Define the handleEdit function
   const handleEdit = (id: string) => {
     const contact = contacts.find(contact => contact.id === id);
     if (contact) {
@@ -35,14 +40,17 @@ const ContactsPage: React.FC = () => {
     }
   };
 
+  // Define the handleDelete function
   const handleDelete = (id: string) => {
     dispatch(deleteContact(id));
   };
 
+  // Render the contacts page
   return (
     <div>
       <h2 className="text-2xl mb-4">Contacts</h2>
       <div>
+        {/* Add contact form */}
         <input
           type="text"
           value={name}
@@ -69,12 +77,14 @@ const ContactsPage: React.FC = () => {
         </button>
       </div>
       <ul className="mt-4">
+        {/* Render the list of contacts */}
         {contacts.map(contact => (
           <li key={contact.id} className="border-b p-2 flex justify-between">
             <div>
               {contact.name} - {contact.email} - {contact.phone}
             </div>
             <div>
+              {/* Add edit and delete buttons */}
               <button onClick={() => handleEdit(contact.id)} className="bg-yellow-500 text-white p-1 mr-2">
                 Edit
               </button>

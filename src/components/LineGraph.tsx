@@ -1,4 +1,5 @@
 // src/components/LineGraph.tsx
+// Import necessary modules from React and Chart.js
 import React from 'react';
 import { Line } from 'react-chartjs-2';
 import {
@@ -12,6 +13,7 @@ import {
   Legend,
 } from 'chart.js';
 
+// Register Chart.js components
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -22,6 +24,7 @@ ChartJS.register(
   Legend
 );
 
+// Define LineGraphProps interface
 interface LineGraphProps {
   data: {
     labels: string[];
@@ -34,6 +37,7 @@ interface LineGraphProps {
   };
 }
 
+// Define LineGraph component
 const LineGraph: React.FC<LineGraphProps> = ({ data }) => {
   return <Line data={data} />;
 };

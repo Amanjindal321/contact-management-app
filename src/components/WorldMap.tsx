@@ -1,3 +1,5 @@
+// src/components/WorldMap.tsx
+// Import necessary modules from React and Leaflet
 import { Marker, Popup } from "react-leaflet";
 import L from 'leaflet';
 import markerIcon from '../utils/marker_icon.png';

@@ -1,3 +1,5 @@
+// src/pages/ChartsMapsPage.tsx
+// Import necessary modules from React and axios
 import axios from "axios";
 import 'leaflet/dist/leaflet.css';
 import { Line } from "react-chartjs-2";
