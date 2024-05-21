@@ -2,8 +2,7 @@
 This is a contact management app built using React, TypeScript, Redux, TailwindCSS, React Router v6 and React Query aka TanstackQuery. 
 The app includes a dashboard with charts and maps that display COVID-19 data for different countries.
 
-# Deployed Link : - 
-
+# Deployed Link : - https://contact-management-app-amber.vercel.app/
 
 
 # Pages and Functionality
